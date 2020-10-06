@@ -35,3 +35,31 @@ Scopri quali misure adottiamo per garantire protezione e sicurezza alle tue info
 ];
 
  ?>
+
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+   <head>
+     <meta charset="utf-8">
+     <title>Google faq</title>
+   </head>
+   <body>
+     <header>
+            <div class="header_top">
+                <a href="#"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" alt=""><span>Privacy e termini</span></a>
+            </div>
+            <div class="header_bottom">
+                <a href="#">Introduzione</a>
+                <a href="#">Norme sulla privacy</a>
+                <a href="#">Termini di servizio</a>
+                <a href="#">Tecnologie</a>
+                <a href="#" class="active">Domande frequenti</a>
+            </div>
+            <section>
+              <!-- parte faq php -->
+              <?php foreach ($faq as $value) { ?>
+                <h2><?php echo $value["question"] ?></h2>
+                <?php echo $value["answer"] ?>
+            <?php } ?>
+            </section>
+   </body>
+ </html>
